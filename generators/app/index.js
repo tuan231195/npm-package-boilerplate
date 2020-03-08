@@ -38,13 +38,13 @@ module.exports = class extends Generator {
 		);
 
 		this.fs.copyTpl(
-			this.templatePath('package.json'),
+			this.templatePath('_package.json'),
 			this.destinationPath('package.json'),
 			this.props
 		);
 
 		this.fs.copyTpl(
-			this.templatePath('.releaserc'),
+			this.templatePath('_.releaserc'),
 			this.destinationPath('.releaserc'),
 			this.props
 		);

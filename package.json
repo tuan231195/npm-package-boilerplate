@@ -1,6 +1,6 @@
 {
   "name": "generator-npm-package-boilerplate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "homepage": "",
   "author": {
@@ -57,6 +57,7 @@
     }
   },
   "eslintConfig": {
+    "root": true,
     "extends": [
       "xo",
       "prettier"
