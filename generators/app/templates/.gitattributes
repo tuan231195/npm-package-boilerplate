@@ -49,4 +49,3 @@ yarn.lock      text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-t
 *.ttf     -text diff
 *.woff    -text diff
 *.woff2   -text diff
-© 2020 GitHub, Inc.
