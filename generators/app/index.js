@@ -33,18 +33,21 @@ module.exports = class extends Generator {
 
 	writing() {
 		this.fs.copy(
-			glob.sync(this.templatePath('**/*'), { dot: true }),
+			glob.sync(this.templatePath('**/*'), {
+				dot: true,
+				ignore: ['**/*.tpl'],
+			}),
 			this.destinationPath()
 		);
 
 		this.fs.copyTpl(
-			this.templatePath('_package.json'),
+			this.templatePath('package.json.tpl'),
 			this.destinationPath('package.json'),
 			this.props
 		);
 
 		this.fs.copyTpl(
-			this.templatePath('_.releaserc'),
+			this.templatePath('.releaserc.tpl'),
 			this.destinationPath('.releaserc'),
 			this.props
 		);
