@@ -7,7 +7,10 @@
     "files": [
         "dist"
     ],
-    "scripts": {
+    "repository": {
+      "url": "git@github.com:<%= github_username %>/<%= name %>.git"
+    },
+  "scripts": {
         "semantic-release": "semantic-release",
         "build": "ttsc",
         "commit": "git-cz",
@@ -20,7 +23,7 @@
         "ci:validate": "rm -rf node_modules && npm ci && npm run validate",
         "prepublishOnly": "npm run ci:validate && npm run build"
     },
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
         "@commitlint/cli": "8.3.5",
         "@commitlint/config-conventional": "8.3.4",

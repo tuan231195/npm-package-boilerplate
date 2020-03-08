@@ -40,17 +40,13 @@ module.exports = class extends Generator {
         this.fs.copyTpl(
             this.templatePath('package.json'),
             this.destinationPath('package.json'),
-            { name: this.props.name }
+            this.props
         );
 
         this.fs.copyTpl(
             this.templatePath('.releaserc'),
             this.destinationPath('.releaserc'),
-            {
-                name: this.props.name,
-                // eslint-disable-next-line camelcase
-                github_username: this.props.github_username,
-            }
+            this.props
         );
     }
 
