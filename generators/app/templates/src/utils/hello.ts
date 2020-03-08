@@ -1,5 +1,5 @@
 export class Hello {
-    getMessage() {
-        return 'Hello World';
-    }
+	getMessage() {
+		return 'Hello World';
+	}
 }
