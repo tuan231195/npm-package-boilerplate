@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Tuan Nguyen",
+      "authorEmail": "vdtn359@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
