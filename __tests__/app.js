@@ -42,4 +42,9 @@ describe('generator-npm-package-boilerplate:app', () => {
 			'git@github.com:vdtn359/test-package.git'
 		);
 	});
+
+	it('create .gitignore', () => {
+		assert.noFile(['.gitignore.tpl']);
+		assert.file(['.gitignore']);
+	});
 });

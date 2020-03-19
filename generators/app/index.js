@@ -51,6 +51,12 @@ module.exports = class extends Generator {
 			this.destinationPath('.releaserc'),
 			this.props
 		);
+
+		this.fs.copy(
+			this.templatePath('.gitignore.tpl'),
+			this.destinationPath('.gitignore'),
+			this.props
+		);
 	}
 
 	install() {
