@@ -4,6 +4,7 @@
 		"target": "es6",
 		"declaration": true,
 		"outDir": "dist",
+		"module": "CommonJS",
 		"allowJs": true,
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
