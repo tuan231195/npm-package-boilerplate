@@ -1,6 +1,6 @@
 {
   "name": "generator-npm-package-boilerplate",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "",
   "homepage": "",
   "author": {
@@ -11,6 +11,9 @@
   "files": [
     "generators"
   ],
+  "repository": {
+    "url": "https://github.com/tuan231195/npm-package-boilerplate.git"
+  },
   "main": "generators/index.js",
   "keywords": [
     "",
