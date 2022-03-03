@@ -5,6 +5,11 @@ const yosay = require('yosay');
 const glob = require('glob');
 
 module.exports = class extends Generator {
+	constructor(...args) {
+		super(...args);
+		this.env.options.nodePackageManager = 'npm';
+	}
+
 	prompting() {
 		// Have Yeoman greet the user.
 		this.log(
@@ -17,8 +22,12 @@ module.exports = class extends Generator {
 
 		const prompts = [
 			{
-				name: 'name',
-				message: 'What is the project name?',
+				name: 'package_name',
+				message: 'What is the package name?',
+			},
+			{
+				name: 'project_name',
+				message: 'What is the github project name?',
 			},
 			{
 				name: 'github_username',
@@ -26,7 +35,7 @@ module.exports = class extends Generator {
 			},
 		];
 
-		return this.prompt(prompts).then(props => {
+		return this.prompt(prompts).then((props) => {
 			this.props = props;
 		});
 	}
@@ -41,7 +50,7 @@ module.exports = class extends Generator {
 		);
 
 		this.fs.copyTpl(
-			this.templatePath('package.json.tpl'),
+			this.templatePath('package.json'),
 			this.destinationPath('package.json'),
 			this.props
 		);
@@ -57,13 +66,5 @@ module.exports = class extends Generator {
 			this.destinationPath('.gitignore'),
 			this.props
 		);
-	}
-
-	install() {
-		this.installDependencies({
-			npm: true,
-			bower: false,
-			yarn: false,
-		});
 	}
 };

@@ -16,5 +16,5 @@
 			"message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 		}
 	],
-	"repositoryUrl": "git@github.com:<%= github_username %>/<%= name %>.git"
+	"repositoryUrl": "git@github.com:<%= github_username %>/<%= project_name %>.git"
 }

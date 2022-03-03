@@ -6,21 +6,21 @@ const fs = require('fs');
 
 describe('generator-npm-package-boilerplate:app', () => {
 	let dir;
-	beforeAll(() => {
-		return helpers
+	beforeAll(() =>
+		helpers
 			.run(path.join(__dirname, '../generators/app'))
 			.withPrompts({
 				name: 'test-package',
 				// eslint-disable-next-line camelcase
 				github_username: 'vdtn359',
 			})
-			.then(destinationDir => {
-				dir = destinationDir;
-			});
-	});
+			.then((destinationDir) => {
+				dir = destinationDir.cwd;
+			})
+	);
 
 	it('creates package.json', () => {
-		assert.noFile(['package.json.tpl']);
+		assert.noFile(['package.json']);
 		assert.file(['package.json']);
 		const packageJsonContent = JSON.parse(
 			fs.readFileSync(path.resolve(dir, 'package.json'), {
